@@ -10,7 +10,7 @@ const Chat = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/ask", { question });
+      const res = await axios.post("https://custom-ai-ym08.onrender.com/ask", { question });
       setAnswer(res.data.answer);
     } catch (err) {
       setAnswer("Error fetching answer.");
